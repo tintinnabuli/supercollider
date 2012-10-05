@@ -330,7 +330,7 @@ void sc_GetSystemAppSupportDirectory(char *str, int size)
 #endif
 			size);
 			
-#if defined(__APPLE__)
+#if defined(__APPLE__) && !defined(SC_IPHONE)
 	// Get the main bundle name for the app from the enclosed Info.plist 
 	sc_AppendBundleName(str, size);
 #endif

@@ -4220,7 +4220,9 @@ void initOpenGLPrimitives();
 	QtCollider::initPrimitives();
 #endif
 
+#if !defined(SC_IPHONE) 	// XXX
 initSCDocPrimitives();
+#endif  // ! SC_IPHONE
 
 	s_recvmsg = getsym("receiveMsg");
 	post("\tNumPrimitives = %d\n", nextPrimitiveIndex());
